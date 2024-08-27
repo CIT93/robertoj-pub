@@ -32,3 +32,13 @@ console.log(typeof myVar);
 
 const myHeading = document.querySelector("h1");
 console.log(typeof myHeading);
+
+const myPet = "cat";
+const myPetName = "Monkey";
+const myPetAge = 2;
+
+console.log("I have a " + myPet + " her name is " + myPetName + " and she is " + myPetAge + " years old");
+const outputString = (`I have a ${myPet} her name is ${myPetName} and she is ${myPetAge} years old`);
+myHeading.textContent = outputString;
+
+// The error is that you do not have the added defer attribute in your script tag.
