@@ -61,7 +61,23 @@ function determineHouseHoldPts(numberInHousehold) {
     } else if (numberInHousehold > 6) {
         cardonFootprintPoints = cardonFootprintPoints + 2;
     }
-    console.log(`Based on the number of member in the household of ${numberInHousehold} the points would be ${cardonFootprintPoints}.`);
+    //console.log(`Based on the number of member in the household of ${numberInHousehold} the points would be ${cardonFootprintPoints}.`);
+}
+
+function determineHomeSizePts(homeSize) {
+    if (homeSize === 'large') {
+        cardonFootprintPoints = cardonFootprintPoints + 10;
+    }
+    else if (homeSize === 'medium') {
+        cardonFootprintPoints = cardonFootprintPoints + 7;
+    }
+    else if (homeSize === 'small') {
+        cardonFootprintPoints = cardonFootprintPoints + 4;
+    }
+    else if (homeSize === 'apartment') {
+        cardonFootprintPoints = cardonFootprintPoints + 2;
+    }
+    console.log(`Based on the size of your home ${homeSize} and number of household members the points would accumulate to ${cardonFootprintPoints}.`);
 }
 
 let cardonFootprintPoints = 0;
@@ -71,4 +87,10 @@ let cardonFootprintPoints = 0;
 // global scope
 
 determineHouseHoldPts(3);
-determineHouseHoldPts(4);
+determineHomeSizePts('large')
+
+// If you have a large house, then add 10 points to your score.
+// If you have a medium-sized house, then add 7 points.
+// If you have a small house, then add 4 points.
+// If you live in an apartment, then add 2 points.
+
