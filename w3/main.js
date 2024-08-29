@@ -44,22 +44,31 @@ operator precedence from highest to lowest
 // // The error is that you do not have the added defer attribute in your script tag.
 
 
-let cardonFootprintPoints = 0;
-const numberInHousehold = 3;
-
-if (numberInHousehold === 1) {
-    cardonFootprintPoints = cardonFootprintPoints + 14;
-} else if (numberInHousehold === 2) {
-    cardonFootprintPoints = cardonFootprintPoints + 12;
-} else if (numberInHousehold === 3) {
-    cardonFootprintPoints = cardonFootprintPoints + 10;
-} else if (numberInHousehold === 4) {
-    cardonFootprintPoints = cardonFootprintPoints + 8;
-} else if (numberInHousehold === 5) {
-    cardonFootprintPoints = cardonFootprintPoints + 6;
-} else if (numberInHousehold === 6) {
-    cardonFootprintPoints = cardonFootprintPoints + 4;
-} else if (numberInHousehold > 6) {
-    cardonFootprintPoints = cardonFootprintPoints + 2;
+function determineHouseHoldPts(numberInHousehold) {
+    console.log("Inside the function")
+    if (numberInHousehold === 1) {
+        cardonFootprintPoints = cardonFootprintPoints + 14;
+    } else if (numberInHousehold === 2) {
+        cardonFootprintPoints = cardonFootprintPoints + 12;
+    } else if (numberInHousehold === 3) {
+        cardonFootprintPoints = cardonFootprintPoints + 10;
+    } else if (numberInHousehold === 4) {
+        cardonFootprintPoints = cardonFootprintPoints + 8;
+    } else if (numberInHousehold === 5) {
+        cardonFootprintPoints = cardonFootprintPoints + 6;
+    } else if (numberInHousehold === 6) {
+        cardonFootprintPoints = cardonFootprintPoints + 4;
+    } else if (numberInHousehold > 6) {
+        cardonFootprintPoints = cardonFootprintPoints + 2;
+    }
+    console.log(`Based on the number of member in the household of ${numberInHousehold} the points would be ${cardonFootprintPoints}.`);
 }
-console.log(`Based on the number of member in the household of ${numberInHousehold} the points would be ${cardonFootprintPoints}.`);
+
+let cardonFootprintPoints = 0;
+//const numberInHousehold = 3;
+
+
+// global scope
+
+determineHouseHoldPts(3);
+determineHouseHoldPts(4);
