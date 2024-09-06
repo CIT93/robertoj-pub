@@ -44,7 +44,7 @@ function start(HouseHoldMembers, homeSize) {
     cfpData.push([HouseHoldMembers, homeSize, houseHoldPTS, homeSizePTS, total]);
 }
 
-function displayOutput {
+function displayOutput() {
 
 }
 
@@ -81,4 +81,4 @@ start(7, "large");
 start(7, "apartment");
 // 28 times
 
-displayOutput()
+displayOutput();
