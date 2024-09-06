@@ -45,9 +45,15 @@ function start(HouseHoldMembers, homeSize) {
 }
 
 function displayOutput() {
-
+    for (arr of cfpData) {
+        console.log(arr);
+        const output = document.getElementById("output");
+        const newP = document.createElement("p");
+        newP.textContent = `Cardon Footprint total is ${arr[4]}`;
+        newP.textContent = `Your type of home is "${arr[1]}" and you have ${arr[0]} people in that home. That would make you have ${arr[4]} total points.`;
+        output.appendChild(newP);
+    }
 }
-
 
 // global scope
 
