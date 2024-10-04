@@ -30,8 +30,13 @@ function renderTblBtn(index, data) {
         data.splice(index, 1);
         renderTbl(data);
     })
-    btnEdit.addEventListener('click', function(e){
-        
+    btnEdit.addEventListener('click', function (e) {
+        FORM.firstname.value = data[index].firstName;
+        FORM.lastname.value = data[index].lastName;
+        FORM.housemembers.value = data[index].houseM;
+        FORM.houses.value = data[index].houseS;
+
+        FORM.dataset.index = index;
     })
     return td;
 }
