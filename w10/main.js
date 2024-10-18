@@ -3,20 +3,35 @@ import { determineHouseHoldPts, determineHouseSizePts } from "./cfp.js";
 import { FORM, FNAME, LNAME, SUBMIT } from "./global.js";
 import { saveLS, cfpData } from "./storage.js";
 
-const start = (first = "Mike", last = "Jones", HouseHoldMembers = 2, houseSize = 'medium', ...extraArgs) => {
-    const houseHoldPTS = determineHouseHoldPts(HouseHoldMembers);
-    const houseSizePTS = determineHouseSizePts(houseSize);
+// const start = (first = "Mike", last = "Jones", HouseHoldMembers = 2, houseSize = 'medium', ...extraArgs) => {
+//     const houseHoldPTS = determineHouseHoldPts(HouseHoldMembers);
+//     const houseSizePTS = determineHouseSizePts(houseSize);
+//     const total = houseHoldPTS + houseSizePTS;
+//     console.log("Extra arguments:", extraArgs);
+//     cfpData.push({
+//         firstName: first,
+//         lastName: last,
+//         houseM: HouseHoldMembers,
+//         houseS: houseSize,
+//         houseMPTS: houseHoldPTS,
+//         houseSPTS: houseSizePTS,
+//         cfpTotal: total,
+//         extraArguments: extraArgs
+//     });
+// }
+
+const start = (...i) => {
+    const houseHoldPTS = determineHouseHoldPts(i[2]);
+    const houseSizePTS = determineHouseSizePts(i[3]);
     const total = houseHoldPTS + houseSizePTS;
-    console.log("Extra arguments:", extraArgs);
     cfpData.push({
-        firstName: first,
-        lastName: last,
-        houseM: HouseHoldMembers,
-        houseS: houseSize,
+        firstName: i[0],
+        lastName: i[1],
+        houseM: i[2],
+        houseS: i[3],
         houseMPTS: houseHoldPTS,
         houseSPTS: houseSizePTS,
         cfpTotal: total,
-        extraArguments: extraArgs
     });
 }
 
