@@ -3,10 +3,11 @@ import { determineHouseHoldPts, determineHouseSizePts } from "./cfp.js";
 import { FORM, FNAME, LNAME, SUBMIT } from "./global.js";
 import { saveLS, cfpData } from "./storage.js";
 
-const start = function (first, last, HouseHoldMembers, houseSize) {
+const start = (first = "Mike", last = "Jones", HouseHoldMembers = 2, houseSize = 'medium', ...extraArgs) => {
     const houseHoldPTS = determineHouseHoldPts(HouseHoldMembers);
     const houseSizePTS = determineHouseSizePts(houseSize);
     const total = houseHoldPTS + houseSizePTS;
+    console.log("Extra arguments:", extraArgs);
     cfpData.push({
         firstName: first,
         lastName: last,
@@ -14,13 +15,14 @@ const start = function (first, last, HouseHoldMembers, houseSize) {
         houseS: houseSize,
         houseMPTS: houseHoldPTS,
         houseSPTS: houseSizePTS,
-        cfpTotal: total
+        cfpTotal: total,
+        extraArguments: extraArgs
     });
 }
 
 renderTbl(cfpData);
 
-const validateField = function (event) {
+const validateField = event => {
     const field = event.target.value;
     const fieldId = event.target.id;
     const fieldError = document.getElementById(`${fieldId}Error`);
@@ -38,7 +40,7 @@ const validateField = function (event) {
 FNAME.addEventListener('blur', validateField);
 LNAME.addEventListener('blur', validateField);
 
-FORM.addEventListener('submit', function (e) {
+FORM.addEventListener('submit', e => {
     e.preventDefault();
     if (FNAME.value !== '' && LNAME.value !== '') {
         SUBMIT.textContent = '';
@@ -51,20 +53,13 @@ FORM.addEventListener('submit', function (e) {
     }
 });
 
-const add2 = function (...a) {
-    return 2 + a[3];
-}
+// const add2 = function (...a) {
+//     return 2 + a[3];
+// }
 
-const result = add2(1, 2, 3, 4);
+// arrow function
 
-// spread arguemnts
+const add2 = a => 2 + a;
 
-// Default oppeerator
 
-//IIFE
-
-const a = 3;
-
-function(add2){
-    console.log("inside IIFE");
-}(a);
+const result = add2(100);
