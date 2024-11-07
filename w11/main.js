@@ -4,23 +4,23 @@ import { FORM, FNAME, LNAME, SUBMIT, FOOD_CHOICE } from "./global.js";
 import { saveLS, cfpData } from "./storage.js";
 import { FP } from "./fp.js";
 
-const start = (first, last, houseHoldMembers, houseSize, foodChoice) => {
-    const houseHoldPTS = determineHouseHoldPts(houseHoldMembers);
-    const houseSizePTS = determineHouseSizePts(houseSize);
-    const foodPTS = determineFoodPts(foodChoice);
-    const total = houseHoldPTS + houseSizePTS + foodPTS;
-    cfpData.push({
-        firstName: first,
-        lastName: last,
-        houseM: houseHoldMembers,
-        houseS: houseSize,
-        foodChoice: foodChoice,
-        houseMPTS: houseHoldPTS,
-        houseSPTS: houseSizePTS,
-        foodPTS: foodPTS, // Added food points
-        cfpTotal: total,
-    });
-}
+// const start = (first, last, houseHoldMembers, houseSize, foodChoice) => {
+//     const houseHoldPTS = determineHouseHoldPts(houseHoldMembers);
+//     const houseSizePTS = determineHouseSizePts(houseSize);
+//     const foodPTS = determineFoodPts(foodChoice);
+//     const total = houseHoldPTS + houseSizePTS + foodPTS;
+//     cfpData.push({
+//         firstName: first,
+//         lastName: last,
+//         houseM: houseHoldMembers,
+//         houseS: houseSize,
+//         foodChoice: foodChoice,
+//         houseMPTS: houseHoldPTS,
+//         houseSPTS: houseSizePTS,
+//         foodPTS: foodPTS, // Added food points
+//         cfpTotal: total,
+//     });
+// }
 
 renderTbl(cfpData);
 

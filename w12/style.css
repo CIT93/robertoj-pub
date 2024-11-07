@@ -1,0 +1,53 @@
+body {
+    background-color: #e6f7ff;
+    color: #003366;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #005580;
+    margin-top: 20px;
+}
+
+.workout-form {
+    background-color: #ccf2ff;
+    padding: 20px;
+    border: 2px solid #005580;
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+label, input, select, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.time-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-inputs input {
+    width: 48%;
+}
+
+button {
+    background-color: #005580;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0073a6;
+}
+
+#output {
+    font-weight: bold;
+    margin-top: 20px;
+}

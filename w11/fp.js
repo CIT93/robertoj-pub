@@ -59,7 +59,7 @@ class FP {
     }
 
     total() {
-        this.total = this.houseHoldPoints = this.houseSizePoints + this.foodChoicePoints;
+        this.total = this.houseHoldPoints + this.houseSizePoints + this.foodChoicePoints;
     }
 
 }
