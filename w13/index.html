@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 12 - Async workout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Get Ready to Work Out!</h1>
+    <div class="workout-form">
+        <label for="exercise">Type of Exercise</label>
+        <select id="exercise">
+            <option value="Push-ups">Push-ups</option>
+            <option value="Pull-ups">Pull-ups</option>
+            <option value="Squats">Squats</option>
+            <option value="Jumping Jacks">Jumping Jacks</option>
+            <option value="Burpees">Burpees</option>
+            <option value="Plank">Plank</option>
+        </select>
+
+        <label for="reps">Target Number of Reps</label>
+        <input type="number" id="reps" required min="0">
+
+        <label>Time</label>
+        <div class="time-inputs">
+            <input type="number" id="minutes" placeholder="Minutes" min="0">
+            <input type="number" id="seconds" placeholder="Seconds" min="0" max="59">
+        </div>
+
+        <button onclick="main()">Start Workout</button>
+    </div>
+    <div id="output"></div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
