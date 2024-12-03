@@ -37,7 +37,8 @@ FORM.addEventListener('submit', e => {
             e.target.foodc.value,
             e.target.foodsource.value,
             e.target.washingmachine.value,
-            e.target.dishwasher.value
+            e.target.dishwasher.value,
+            e.target.householdpurchases.value
         );
         cfpData.push(fpObj);
         saveLS(cfpData);

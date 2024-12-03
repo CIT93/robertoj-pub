@@ -1,5 +1,5 @@
 class FP {
-    constructor(first, last, houseMembers, houseSize, foodChoice, foodSource, washingMachine, dishWasher) {
+    constructor(first, last, houseMembers, houseSize, foodChoice, foodSource, washingMachine, dishWasher, houseHoldPurchases) {
         this.first = first;
         this.last = last;
         this.houseMembers = houseMembers;
@@ -8,12 +8,14 @@ class FP {
         this.foodSource = foodSource;
         this.washingMachine = washingMachine;
         this.dishWasher = dishWasher;
+        this.houseHoldPurchases = houseHoldPurchases;
 
         this.calHouseHoldPoints();
         this.calHouseSizePoints();
         this.calFoodChoicePoints();
         this.calFoodSourcePoints();
         this.calAppliancePoints();
+        this.calHouseHoldPurchasesPoints();
         this.calTotal();
 
     }
@@ -96,13 +98,28 @@ class FP {
         }
     }
 
+    calHouseHoldPurchasesPoints() {
+        if (this.houseHoldPurchases === "lots") {
+            this.houseHoldPurchasesPoints = 10;
+        } else if (this.houseHoldPurchases === "frequent") {
+            this.houseHoldPurchasesPoints = 8;
+        } else if (this.houseHoldPurchases === "average") {
+            this.houseHoldPurchasesPoints = 6;
+        } else if (this.houseHoldPurchases === "few") {
+            this.houseHoldPurchasesPoints = 4;
+        } else if (this.houseHoldPurchases === "none") {
+            this.houseHoldPurchasesPoints = 2;
+        }
+    }
+
     calTotal() {
         this.total =
             this.houseHoldPoints +
             this.houseSizePoints +
             this.foodChoicePoints +
             this.foodSourcePoints +
-            this.appliancePoints;
+            this.appliancePoints +
+            this.houseHoldPurchasesPoints;
     }
 
 }

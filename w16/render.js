@@ -73,6 +73,7 @@ const renderTblBtn = (obj, index, data) => {
         FORM.foodsource.value = obj.foodSource;
         FORM.washingmachine.value = obj.washingMachine;
         FORM.dishwasher.value = obj.dishWasher;
+        FORM.householdpurchases.value = obj.houseHoldPurchases;
         onUpdate(index, data);
     });
 
