@@ -1,7 +1,10 @@
-# solution
+# part 1
 
-I plan to create a separate if function for each appliance. My idea is to accumulate points by taking user input for each appliance and running two if functions to calculate and add the points. I'm still undecided on whether to use a dropdown menu or allow users to type numbers for the input. That’s my plan so far.
+"my code for part 1" commit 
 
-## last problem
+My approach was to separate dishwashers and washing machines since most people use a washing machine, but not everyone uses a dishwasher. also I chose to avoid using checkmarks because they can be challenging to work with. I learned this the hard way while working on my decision app.
 
-in the final challenege after doing some research i have found that using the method toString() allows us to return a string for the object. 
+
+
+
+
