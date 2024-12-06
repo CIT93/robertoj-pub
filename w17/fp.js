@@ -1,5 +1,5 @@
 class FP {
-    constructor(first, last, houseMembers, houseSize, foodChoice, foodSource, washingMachine, dishWasher, houseHoldPurchases, garbageCans, recycle) {
+    constructor(first, last, houseMembers, houseSize, foodChoice, foodSource, washingMachine, dishWasher, houseHoldPurchases, garbageCans, recycle, personalVehicle, publicTransportation, flights) {
         this.first = first;
         this.last = last;
         this.houseMembers = houseMembers;
@@ -11,6 +11,9 @@ class FP {
         this.houseHoldPurchases = houseHoldPurchases;
         this.garbageCans = garbageCans;
         this.recycle = recycle;
+        this.personalVehicle = personalVehicle;
+        this.publicTransportation = publicTransportation;
+        this.flights = flights;
 
         this.calHouseHoldPoints();
         this.calHouseSizePoints();
@@ -19,6 +22,7 @@ class FP {
         this.calAppliancePoints();
         this.calHouseHoldPurchasesPoints();
         this.calGarbageCansPoints();
+        this.calTransportation();
         this.calTotal();
 
     }
@@ -129,6 +133,45 @@ class FP {
         }
     }
 
+    calTransportation() {
+        this.transportationPoints = 0;
+
+        if (this.personalVehicle === "high_car") {
+            this.transportationPoints += 12;
+        } else if (this.personalVehicle === "medium_high_car") {
+            this.transportationPoints += 10;
+        } else if (this.personalVehicle === "medium_car") {
+            this.transportationPoints += 6;
+        } else if (this.personalVehicle === "low_car") {
+            this.transportationPoints += 4;
+        } else if (this.personalVehicle === "none_car") {
+            this.transportationPoints += 0;
+        }
+
+        if (this.publicTransportation === "high") {
+            this.transportationPoints += 12;
+        } else if (this.publicTransportation === "medium_high") {
+            this.transportationPoints += 10;
+        } else if (this.publicTransportation === "medium") {
+            this.transportationPoints += 6;
+        } else if (this.publicTransportation === "low") {
+            this.transportationPoints += 4;
+        } else if (this.publicTransportation === "very_low") {
+            this.transportationPoints += 2;
+        } else if (this.publicTransportation === "none") {
+            this.transportationPoints += 0;
+        }
+
+        if (this.flights === "short") {
+            this.transportationPoints += 2;
+        } else if (this.flights === "medium") {
+            this.transportationPoints += 6;
+        } else if (this.flights === "long") {
+            this.transportationPoints += 20;
+        }
+    }
+
+
     calTotal() {
         this.total =
             this.houseHoldPoints +
@@ -138,7 +181,8 @@ class FP {
             this.appliancePoints +
             this.houseHoldPurchasesPoints +
             this.recycle.recyclePoints +
-            this.garbageCansPoints;
+            this.garbageCansPoints +
+            this.transportationPoints;
     }
 
 }

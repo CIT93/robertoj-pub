@@ -24,7 +24,7 @@
                 <span id="lastNameError" class="error"></span>
             </div>
             <div>
-                <label>Count the members of your household.</label>
+                <label>Count the members of your household(include yourself)</label>
                 <input type="number" name="housem" id="housem" min="1" max="6" required />
             </div>
             <div>
@@ -123,6 +123,44 @@
                     <input class="recycle" type="checkbox" id="food" name="food" value="food">
                     Food
                 </label>
+            </fieldset>
+            <fieldset>
+                <legend>Your Annual Transportation</legend>
+
+                <div>
+                    <label>Personal Vehicle Usage Yearly</label>
+                    <select name="personalvehicle" required>
+                        <option value="">---Please select your mileage---</option>
+                        <option value="high_car">More than 15,000 miles per year</option>
+                        <option value="medium_high_car">10,000 to 15,000 miles per year</option>
+                        <option value="medium_car">1,000 to 10,000 miles per year</option>
+                        <option value="low_car">Less than 1,000 miles per year</option>
+                        <option value="none_car">Do not have a car</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Public Transportation Usage Yearly</label>
+                    <select name="publictransportation" required>
+                        <option value="">---Please select your mileage---</option>
+                        <option value="high">More than 20,000 miles per year</option>
+                        <option value="medium_high">15,000 to 20,000 miles per year</option>
+                        <option value="medium">10,000 to 15,000 miles per year</option>
+                        <option value="low">1,000 to 10,000 miles per year</option>
+                        <option value="very_low">Less than 1,000 miles per year</option>
+                        <option value="none">Do not use public transportation</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Flights Yearly</label>
+                    <select name="flights" required>
+                        <option value="">---Please select your travel distance---</option>
+                        <option value="short">Short distances within your state</option>
+                        <option value="medium">Medium distances to nearby states or countries</option>
+                        <option value="long">Far distances, such as another continent</option>
+                    </select>
+                </div>
             </fieldset>
             <button type="submit">Submit</button><br>
             <span id="submitError" class="error"></span>

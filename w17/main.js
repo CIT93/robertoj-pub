@@ -51,7 +51,10 @@ FORM.addEventListener('submit', e => {
             e.target.dishwasher.value,
             e.target.householdpurchases.value,
             e.target.garbagecans.value,
-            determineRecycleItems(e)
+            determineRecycleItems(e),
+            e.target.personalvehicle.value,
+            e.target.publictransportation.value,
+            e.target.flights.value
         );
         cfpData.push(fpObj);
         saveLS(cfpData);
