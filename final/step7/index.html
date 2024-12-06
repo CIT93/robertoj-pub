@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="main.js"></script>
+    <title>Meal Recommendation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="form">
+        <fieldset>
+            <legend>Get Your Meal Recommendations</legend>
+            <div>
+                <label>Dining Preference:</label>
+                <select id="diningPreference" name="diningpreference" required>
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="Eat In">Eat In</option>
+                    <option value="Eat Out">Eat Out</option>
+                </select>
+            </div>
+            <div>
+                <label>Cuisine Type:</label>
+                <select id="cuisineType" name="cuisinetype" required>
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Mexican">Mexican</option>
+                    <option value="Vietnamese">Vietnamese</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="Korean">Korean</option>
+                </select>
+            </div>
+            <div id="mealSelection" style="display: none;">
+                <p>Select Your Meals</p>
+                <div id="mealOptions"></div>
+            </div>
+            <div>
+                <label>How many times have you eaten out this week? (0-7):</label>
+                <input type="number" id="timesAteOut" name="timesateout" min="0" max="7" required>
+                <p id="validationMessage" class="validation-message"></p>
+            </div>
+            <div>
+                <label>Are you tired?</label>
+                <input type="checkbox" id="isTired" name="istired">
+            </div>
+            <button type="submit">Get Recommendations</button>
+        </fieldset>
+    </form>
+    <div id="output"></div>
+    <div id="tab-data"></div>
+    <div id="recommendation"></div>
+</body>
+
+</html>

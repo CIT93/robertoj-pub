@@ -1,0 +1,33 @@
+html {
+    font-size: 22px;
+}
+
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+
+input:in-range {
+    background-color: lightgreen;
+}
+
+input:out-of-range {
+    background-color: lightcoral;
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+    padding: 5px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: forestgreen;
+}
+
+#recommendation {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: red;
+}
