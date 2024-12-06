@@ -84,7 +84,7 @@ const renderTblBtn = (obj, index, data) => {
 
     btnEdit.addEventListener('click', e => {
         FORM[1].value = obj.diningPreference;
-        FORM[2].value = obj.cuisineType
+        FORM[2].value = obj.cuisineType;
 
         document.getElementById("mealSelection").style.display = "block";
 
@@ -111,10 +111,13 @@ const renderTblBtn = (obj, index, data) => {
         }
         document.getElementById("timesAteOut").value = obj.timesAteOut;
         document.getElementById("isTired").checked = obj.isTired === "Yes";
+
+        onUpdate(index, data);
     });
 
     return td;
-}
+};
+
 
 const renderTblBody = (data, keys = null) => {
     const tbody = document.createElement("tbody");

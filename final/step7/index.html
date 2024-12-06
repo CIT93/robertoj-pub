@@ -7,6 +7,7 @@
     <script type="module" src="main.js"></script>
     <title>Meal Recommendation</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -31,6 +32,10 @@
                     <option value="Vietnamese">Vietnamese</option>
                     <option value="Japanese">Japanese</option>
                     <option value="Korean">Korean</option>
+                    <option value="Indian">Indian</option>
+                    <option value="Thai">Thai</option>
+                    <option value="Greek">Greek</option>
+                    <option value="American">American</option>
                 </select>
             </div>
             <div id="mealSelection" style="display: none;">
@@ -42,9 +47,9 @@
                 <input type="number" id="timesAteOut" name="timesateout" min="0" max="7" required>
                 <p id="validationMessage" class="validation-message"></p>
             </div>
-            <div>
-                <label>Are you tired?</label>
+            <div class="are-you-tired">
                 <input type="checkbox" id="isTired" name="istired">
+                <label for="isTired">Are you tired?</label>
             </div>
             <button type="submit">Get Recommendations</button>
         </fieldset>

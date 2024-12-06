@@ -1,33 +1,163 @@
-html {
-    font-size: 22px;
-}
-
 body {
-    background-color: #333;
-    color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-input:in-range {
-    background-color: lightgreen;
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #87ceeb;
 }
 
-input:out-of-range {
-    background-color: lightcoral;
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
-table,
-th,
-td {
-    border: 1px solid;
-    padding: 5px;
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4682b4;
+    margin-bottom: 10px;
 }
 
-tbody tr:nth-child(odd) {
-    background-color: forestgreen;
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2f4f4f;
+}
+
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #f9f9f9;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+button:hover {
+    background-color: #5a9bd4;
+}
+
+#mealSelection {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #ffa07a;
+    border-radius: 4px;
+}
+
+#mealOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px auto;
+}
+
+#mealOptions div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+#mealOptions div label {
+    cursor: default;
+}
+
+.are-you-tired {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid #87ceeb;
+    border-radius: 4px;
+    background-color: #ffffff;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+#tab-data {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+#tab-data table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#tab-data th,
+#tab-data td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#tab-data th {
+    background-color: #4682b4;
+    color: white;
+    font-weight: bold;
+}
+
+#tab-data td {
+    background-color: #f0f8ff;
 }
 
 #recommendation {
-    margin-top: 20px;
+    margin: 20px auto;
+    padding: 15px;
+    width: 80%;
+    max-width: 600px;
+    background-color: #ffa07a;
+    border: 2px solid #ff6347;
+    border-radius: 8px;
     font-size: 1.2em;
-    color: red;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
